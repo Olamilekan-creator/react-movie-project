@@ -10,6 +10,8 @@ import image7 from "../assets/man.jpeg";
 import { PlayCircle } from "@mui/icons-material";
 import "../index.css";
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const Carousel = () => {
@@ -29,35 +31,99 @@ const Carousel = () => {
         <div className="carousel">
             <Slider {...settings}>
 
-            <div className="carousel__img fade">
-           <img src={image1} className="slide">
-           <div className="texts">
-            <div className="texts__title">
-                <h1 className="texts__description">Nice Frame</h1>
-                <p className="texts__para">2012 Olamilekan Movie</p>
-                <button className="watch"><span className="material-symbols-rounded font">play_circle</span> Watch Now <span className="free">FREE</span></button>
-            </div>
-        </div>
-     
 
-                <div>
-                    <img src={image2} alt="slide2" />
-                </div>
-                <div>
-                    <img src={image3} alt="slide3" />
-                </div>
-                <div>
-                    <img src={image4} alt="slide4" />
-                </div>
-                <div>
-                    <img src={image5} alt="slide5" />
-                </div>
-                <div>
-                    <img src={image6} alt="slide6" />
-                </div>
-                <div>
-                    <img src={image7} alt="slide7" />
-                </div>
+        <div className="carousel__img fade">
+    <img src={image1} className="slide" alt="" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Nice Frame</h1>
+        <p className="texts__para">2012 Olamilekan Movie</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image2} alt="slide2" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Slide 2 Title</h1>
+        <p className="texts__para">Slide 2 Description</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image3} className="slide" alt="" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Nice Frame</h1>
+        <p className="texts__para">2012 Olamilekan Movie</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image4} alt="slide2" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Slide 2 Title</h1>
+        <p className="texts__para">Slide 2 Description</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image5} className="slide" alt="" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Nice Frame</h1>
+        <p className="texts__para">2012 Olamilekan Movie</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image6} alt="slide2" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Slide 2 Title</h1>
+        <p className="texts__para">Slide 2 Description</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className="carousel__img fade">
+    <img src={image7} className="slide" alt="" />
+    <div className="texts">
+      <div className="texts__title">
+        <h1 className="texts__description">Nice Frame</h1>
+        <p className="texts__para">2012 Olamilekan Movie</p>
+        <button className="watch">
+          <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+ 
             </Slider>
             </div>
     );
@@ -82,113 +148,3 @@ const CustomPrevArrow = (props) => {
 };
 
     export default Carousel;
-
-//   const [currentSlide, setCurrentSlide] = useState(0);
-
-//   const carouselItems = [
-//     {
-//       image: image1,
-//       title: "Sunset Movie",
-//       year: 2012,
-//     },
-//     {
-//       image: image2,
-//       title: "Nice Frame",
-//       year: 2012,
-//     },
-//     {
-//       image: image3,
-//       title: "Just a Ticket",
-//       year: 2012,
-//     },
-//     {
-//       image: image4,
-//       title: "Young Boy",
-//       year: 2012,
-//     },
-//     {
-//       image: image5,
-//       title: "Such a Beautiful City",
-//       year: 2012,
-//     },
-//     {
-//       image: image6,
-//       title: "Family",
-//       year: 2012,
-//     },
-//     {
-//       image: image7,
-//       title: "Gentleman",
-//       year: 2012,
-//     },
-//   ];
-
-//   const totalSlides = carouselItems.length;
-
-//   const goToSlide = (slideIndex) => {
-//     setCurrentSlide(slideIndex);
-//   };
-
-//   const nextSlide = () => {
-//     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-//   };
-
-//   const prevSlide = () => {
-//     setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
-//   };
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       nextSlide();
-//     }, 5000);
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className="carousel">
-//       <div className="dots">
-//         {carouselItems.map((_, index) => (
-//           <span
-//             key={index}
-//             onClick={() => goToSlide(index)}
-//             className={`dot ${currentSlide === index ? "active" : ""}`}
-//           />
-//         ))}
-//       </div>
-
-//       <button className="carousel-btn prev click" onClick={prevSlide}>
-//         &#10094;
-//       </button>
-//       <button className="carousel-btn next click" onClick={nextSlide}>
-//         &#10095;
-//       </button>
-
-//       {carouselItems.map((item, index) => (
-//         <div
-//           key={index}
-//           className={`carousel__img fade ${
-//             currentSlide === index ? "active" : ""
-//           }`}
-//           id="carouselImages"
-//         >
-//           <img src={item.image} className="slide active" alt={item.title} />
-//           <div className="texts">
-//             <div className="texts__title">
-//               <h1 className="texts__description">{item.title}</h1>
-//               <p className="texts__para">{item.year} Olamilekan Movie</p>
-//               <button className="watch">
-//                 <span className="material-symbols-rounded font">
-//                   <PlayCircle style={{ fontSize: 25 }} />
-//                 </span>{" "}
-//                 Watch Now! <span className="free">{"FREE"}</span>
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-

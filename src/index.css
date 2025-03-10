@@ -464,11 +464,12 @@ position: relative;
 .texts {
   position: absolute;
   top: 35%;
-  left: 7.5%;
+  left: 7.2%;
   color: white;
   font-size: 50px;
  margin: 12px 0;
   border: none;
+  z-index: 1;
   
 }
 
@@ -514,10 +515,15 @@ position: relative;
  color: white;
 }
 
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .carousel-img {
-  display: none;
-  /* transition: 0.3s ease;
-  height: 100%; */
+position: relative;
+
 }
 
 .slide {
@@ -527,12 +533,13 @@ position: relative;
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 35%;
   background-color: gba(255, 255, 255, 0.8);
   border: none;
   cursor: pointer;
   font-size: 40px;
   user-select: none;
+  z-index: 2;
 }
 
 .carousel-btn:hover {
