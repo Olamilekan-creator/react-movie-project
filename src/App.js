@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import MovieCard from "./components/MovieCard";
@@ -11,8 +12,13 @@ import "./index.css";
 
 function App() {
   return (
+    <Router>
     <div>
       <Header />
+   <Routes>
+    <Route />
+    <Route />
+   </Routes>
       <Carousel />
       <a href="/recommend" className="recommend">
       <div id="recommended">
@@ -23,6 +29,7 @@ function App() {
       <About />
       <Footer />
     </div>
+    </Router>
   );
 }
 
