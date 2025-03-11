@@ -5,15 +5,15 @@ import "../index.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const openMenu = () => {
-    setIsMenuOpen(true);
+   document.body.classList += " menu--open"
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    document.body.classList.remove("menu--open")
   };
 
   const toggleContrast = () => {
@@ -38,7 +38,6 @@ const Header = () => {
               </span>
             </div>
 
-            {isMenuOpen && (
               <div className="menu__backdrop" onClick={closeMenu}>
                 <span className="material-symbols-rounded menu__close click">
                   <Close />
@@ -66,23 +65,22 @@ const Header = () => {
                   </li>
                   <li className="menu__list">
                     <Link to="/recommended" className="menu__link" onClick={closeMenu}>
-                    Home
+                    Movies
                     </Link>
                   </li>
                   <li className="menu__list">
                     <Link to="/about" className="menu__link" onClick={closeMenu}>
-                    Home
+                   About Us
                     </Link>
                   </li>
                   <li className="menu__list">
                     <Link to="/mailto:olamilekan.akinlusi@icloud.com" className="menu__link" onClick={closeMenu}>
-                    Home
+                    Contact
                     </Link>
                   </li>
                   <button className="login__menu--btn click" onClick={toggleContrast}>Login</button>
                 </ul>
                  </div>
-            )}
 
             <div className="logo">
               <img src={PersonalLogo} id="personal-logo" alt="Logo" />

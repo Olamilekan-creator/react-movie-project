@@ -5,6 +5,7 @@ import Movie3 from '../assets/g5.jpg'
 import Movie4 from '../assets/g6.jpg'
 import { PlayCircle } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import '../index.css'
 
 const MovieCard = () => {
     const movieItems = [
@@ -41,7 +42,7 @@ return (
                 <div className="movie__description">
                   <h3 className="movie__description--title">{item.title}</h3>
                   <span className="material-symbols-rounded movie__btn click"><PlayCircle style={{ fontSize: 25, color: '' }} /></span>
-                  <Link to="/details.html" className="more">
+                  <Link to="/details" className="more">
                     More <span className="orange details">Details...</span>
                   </Link>
                 </div>
