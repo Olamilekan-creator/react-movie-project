@@ -1,5 +1,4 @@
 import React from "react";
-import MovieCard from "../components/MovieCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../index.css'
@@ -13,8 +12,44 @@ const Recommend = () => {
     };
     const recommendItems = [
         {
-            image: 'image1',
-            title: 'Guardians of the Galaxy Vol 2'
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
+        },
+        {
+            image: image1,
+            title: 'Echo'
         }
     ]
 
@@ -32,15 +67,16 @@ const Recommend = () => {
                 <hr className="new__line" />
 
                 <div className="new__wrapper">
-                 {recommendItems.map((item) => (<div className="new__movie">
+                 {recommendItems.map((item, index) => (
+                    <div  key={index} className="new__movie">
                         <div className="new__movie--one">
-                            <img src={item.image} className="new__movie1" alt="Movie Poster" id="moviePoster" />
+                            <img src={item.image} className="new__movie1" alt="Movie Poster" />
                             <div className="new__movie__wrapper-bg">
                                 <div className="new__movie--description">
                                     <h3 id="movieTitle" className="new__description--title">
                                         {item.title}
                                     </h3>
-                                    <span className="material-symbols-rounded new__btn click" onClick={toggleContrast}>{PlayCircle}</span>
+                                    <span className="material-symbols-rounded new__btn click" onClick={toggleContrast}><PlayCircle/></span>
                                     <Link to="/details" className="more">
                                     More <span className="orange details">Details...</span>
                                     </Link>
@@ -48,7 +84,7 @@ const Recommend = () => {
                             </div>
                         </div>
                     </div>
-                    ))};
+                    ))}
                 </div>
             </div>
         </div>

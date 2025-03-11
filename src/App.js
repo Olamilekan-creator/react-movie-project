@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate, Link } from 'react-router-dom';
 import Header from "./components/Header";
-import Carousel from "./components/Carousel";
-import MovieCard from "./components/MovieCard";
-import About from "./components/About";
 import Footer from "./components/Footer";
 import "./index.css";
 import Recommend from "./recommended/Recommend";
-
-
-
+import Carousel from "./home/Carousel";
+import About from "./home/About";
+import MovieCard from "./home/MovieCard";
+import Details from "./details/Details";
 
 
 function App() {
@@ -17,14 +15,17 @@ function App() {
   return (
     <Router>
     <div>
-      <Header />
    <Routes>
     <Route path="/"/>
     <Route path="/recommend" element={<Recommend/>} />
+    <Route path="/details" element={<Details/>} />
    </Routes>
-      <Carousel />
-      <MovieCard />
-      <About />
+   <Header />
+   <Carousel />
+   <MovieCard />
+   <About />
+   
+  
       <Footer />
     </div>
     </Router>

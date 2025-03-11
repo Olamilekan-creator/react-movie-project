@@ -860,9 +860,6 @@ padding: 30px 0;
 /* Small Phones, Tablets, Large Smartphones */
 
 @media (max-width:1024px) {
-  #personal-logo {
-
-  }
 
 .nav__link--list, .search__bar {
   display: none;

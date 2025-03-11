@@ -26,17 +26,16 @@ const MovieCard = () => {
         }
     ]
 return (
-  
-    <div className="movie">
-
-<Link to="/recommend" className="recommend">
+  <>
+    <Link to="/recommend" className="recommend">
       <div id="recommended">
       Recommended Movies <span className="right">&#10095;</span>
       </div>
       </Link>
 
-        {movieItems.map((item) => (
-              <div className="movie__one">
+    <div className="movie">
+{movieItems.map((item, index) => (
+              <div key={index} className="movie__one">
               <img src={item.image} className="movie1" alt="Movie Poster" />
               <div className="movie__wrapper--bg">
                 <div className="movie__description">
@@ -50,6 +49,7 @@ return (
             </div>
         ))}
       </div>
+      </>
 );
 }
 
