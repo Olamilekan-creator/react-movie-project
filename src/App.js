@@ -1,30 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate, Link } from 'react-router-dom';
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import MovieCard from "./components/MovieCard";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import "./index.css";
+import Recommend from "./recommended/Recommend";
+
 
 
 
 
 function App() {
+
   return (
     <Router>
     <div>
       <Header />
    <Routes>
-    <Route />
-    <Route />
+    <Route path="/"/>
+    <Route path="/recommend" element={<Recommend/>} />
    </Routes>
       <Carousel />
-      <a href="/recommend" className="recommend">
-      <div id="recommended">
-      Recommended Movies <span className="right">&#10095;</span>
-      </div>
-      </a>
       <MovieCard />
       <About />
       <Footer />

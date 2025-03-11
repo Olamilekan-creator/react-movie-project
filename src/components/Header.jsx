@@ -81,18 +81,18 @@ const Header = () => {
             <div>
                 <ul className="nav__link--list">
                   <li className="nav__link">
-                    <a href="#" className="nav__link--anchor link__hover-effect link__hover-effect--black">
+                    <a href="/" className="nav__link--anchor link__hover-effect link__hover-effect--black">
                       Home
                     </a>
                   </li>
                   <li className="nav__link" onClick={toggleContrast}>
-                  {/* {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'} */}
-                    <a href="#recommended" className="nav__link--anchor link__hover-effect link__hover-effect--black">
+
+                    <a href="/recommended" className="nav__link--anchor link__hover-effect link__hover-effect--black">
                       Movies
                     </a>
                   </li>
                   <li className="nav__link" onClick={toggleContrast}>
-                    <a href="#about" className="nav__link--anchor link__hover-effect link__hover-effect--black">
+                    <a href="/about" className="nav__link--anchor link__hover-effect link__hover-effect--black">
                       About Us
                     </a>
                   </li>

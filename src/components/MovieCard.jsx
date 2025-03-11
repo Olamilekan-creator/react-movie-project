@@ -4,6 +4,7 @@ import Movie2 from '../assets/q1.jpg'
 import Movie3 from '../assets/g5.jpg'
 import Movie4 from '../assets/g6.jpg'
 import { PlayCircle } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const MovieCard = () => {
     const movieItems = [
@@ -25,7 +26,15 @@ const MovieCard = () => {
         }
     ]
 return (
+  
     <div className="movie">
+
+<Link to="/recommend" className="recommend">
+      <div id="recommended">
+      Recommended Movies <span className="right">&#10095;</span>
+      </div>
+      </Link>
+
         {movieItems.map((item) => (
               <div className="movie__one">
               <img src={item.image} className="movie1" alt="Movie Poster" />
@@ -33,9 +42,9 @@ return (
                 <div className="movie__description">
                   <h3 className="movie__description--title">{item.title}</h3>
                   <span className="material-symbols-rounded movie__btn click"><PlayCircle style={{ fontSize: 25, color: '' }} /></span>
-                  <a href="./details.html" className="more">
+                  <Link to="/details.html" className="more">
                     More <span className="orange details">Details...</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
