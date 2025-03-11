@@ -2,11 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import image from "../assets/sunset-3189813_1280.jpg"
+import '../index.css'
 
 const Details = () => {
     const detailItems = {
     image: image,
-    title: 'Sunset Movie'
+    title: 'Sunset Movie',
     description: 'Echo is an American television miniseries created for the streaming service Disney+, based on Marvel Comics featuring the character of the same name.'
 }
 
