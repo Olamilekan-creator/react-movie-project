@@ -19,8 +19,6 @@ function App() {
     <Route path="/recommend" element={<Recommend/>} />
     <Route path="/details" element={<Details/>} />
    </Routes>
-   <Header />
-      <Footer />
     </div>
     </Router>
   );

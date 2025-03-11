@@ -121,7 +121,7 @@ const Header = () => {
 
             <div className="search__container">
               <div className="search__bar">
-                <Link to="/recommend.html">
+                <Link to="/recommend">
                   <span className="material-symbols-rounded btn__search">
                     {" "}
                     <Search style={{ fontSize: 25, color: "" }} />
