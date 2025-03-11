@@ -89,48 +89,44 @@ const Header = () => {
             <div>
               <ul className="nav__link--list">
                 <li className="nav__link">
-                  <a
-                    href="/"
+                  <Link to="/"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__link" onClick={toggleContrast}>
-                  <a
-                    href="/recommended"
+                  <Link to="/recommended"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     Movies
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__link" onClick={toggleContrast}>
-                  <a
-                    href="/about"
+                  <Link to="/about"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__link" onClick={toggleContrast}>
-                  <a
-                    href="mailto:olamilekan.akinlusi@icloud.com"
+                  <Link to="mailto:olamilekan.akinlusi@icloud.com"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="search__container">
               <div className="search__bar">
-                <a href="/recommend.html">
+                <Link to="/recommend.html">
                   <span className="material-symbols-rounded btn__search">
                     {" "}
                     <Search style={{ fontSize: 25, color: "" }} />
                   </span>
-                </a>
+                </Link>
                 <input
                   type="text"
                   className="movie__bar"

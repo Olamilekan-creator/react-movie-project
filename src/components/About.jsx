@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutImg from '../assets/9.jpg'
 import { PlayCircle } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -18,9 +19,9 @@ const About = () => {
             <img src={AboutImg} className="about__img" alt="About Img" />
             <div className="about__text">
               <h2 className="about__h2">Releases Coming Soon</h2>
-              <a href="">
+              <Link to="">
                 <span className="material-symbols-rounded about__play"><PlayCircle style={{ fontSize: 25, color: '' }} /></span>
-              </a>
+              </Link>
               <h4 className="about__h4">Play Video</h4>
               <h4 className="video__text">All Videos +</h4>
             </div>

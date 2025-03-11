@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/my logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,38 +12,34 @@ const Footer = () => {
         <div
           className="footer__links"
         >
-          <a
-            href="/about"
+          <Link to="/about"
             className="footer__link
           nav__link--anchor link__hover-effect link__hover-effect--black"
           >
             About
-          </a>
-          <a
-            href="mailto:olamilekan.akinlusi@icloud.com"
+          </Link>
+          <Link to="mailto:olamilekan.akinlusi@icloud.com"
             className="footer__link
           nav__link--anchor link__hover-effect link__hover-effect--black"
           >
             Contact
-          </a>
-          <a
-            href="https://www.linkedin.com/in/olamilekan-akinlusi-26084a290/"
+          </Link>
+          <Link to="https://www.linkedin.com/in/olamilekan-akinlusi-26084a290/"
             className="footer__link
           nav__link--anchor link__hover-effect link__hover-effect--black"
           >
             LinkedIn
-          </a>
-          <a
-            href="https://github.com/Olamilekan-creator"
+          </Link>
+          <Link to="https://github.com/Olamilekan-creator"
             target="_blank"
             className="footer__link nav__link--anchor link__hover-effect link__hover-effect--black"
           >
             Github
-          </a>
-          <a href="/" target="_blank" className="footer__link
+          </Link>
+          <Link to="/" target="_blank" className="footer__link
           nav__link--anchor link__hover-effect link__hover-effect--black">
             Resume
-          </a>
+          </Link>
         </div>
         <div className="footer__copyright">
           Copyright &copy; 2025 Olamilekan Akinlusi
