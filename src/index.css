@@ -35,6 +35,34 @@ body.high-contrast {
     color: #ff7518;
 }
 
+/* No movies found */
+
+.no-movies {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #333;
+}
+
+.no-movies h2 {
+  font-size: 32px;
+  color: #ff6347;
+}
+
+.no-movies p {
+  font-size: 18px;
+  color: #666;
+}
+
+.no-movies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
 /* menu open and close */
 
 .overlay__btn {
@@ -805,7 +833,7 @@ padding: 30px 0;
 @media (max-width:1024px) {
 
 .nav__link--list, .search__bar {
-  display: none;
+  display: block;
 }
 
 

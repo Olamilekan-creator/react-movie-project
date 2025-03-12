@@ -18,19 +18,19 @@ const Details = () => {
     <div className="more__details--row">
         <h2 className="more__details--text">More Details</h2>
         <hr className="hr__line" />
-     {detailItems.map((item, index) => (
-        <div key={index} className="more__details--container">
+     
+        <div className="more__details--container">
         <figure>
-            <img src={item.image} alt="Sunset" className="more__details--img" />
+            <img src={detailItems.image} alt="Sunset" className="more__details--img" />
         </figure>
         <div className="more__details--description">
-            <h3 className="more__text">{item.title}</h3>
-            <p className="more__details--para">{item.description}</p>
-            <p className="more__details--para">{item.description}</p>
-            <p className="more__details--para">{item.description}</p>
+            <h3 className="more__text">{detailItems.title}</h3>
+            <p className="more__details--para">{detailItems.description}</p>
+            <p className="more__details--para">{detailItems.description}</p>
+            <p className="more__details--para">{detailItems.description}</p>
         </div>
     </div>
-     ))}
+ 
     </div>
 </section>
 <Footer />

@@ -3,6 +3,7 @@ import PersonalLogo from "../assets/my logo.png";
 import { Menu, Search, Close } from "@mui/icons-material";
 import "../index.css";
 import { Link } from "react-router-dom";
+import NoMoviesFound from "./NoMoviesFound";
 
 const Header = () => {
 
