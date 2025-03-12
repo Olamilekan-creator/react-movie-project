@@ -10,7 +10,8 @@ import image7 from "../assets/man.jpeg";
 import { PlayCircle } from "@mui/icons-material";
 import "../index.css";
 import Slider from 'react-slick';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const Carousel = () => {
