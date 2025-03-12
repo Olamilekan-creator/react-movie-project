@@ -33,7 +33,7 @@ try {
 
 const response = await fetch(
 
-https://www.omdbapi.com/?s=${searchTerm}&apikey=4f56ff1f
+`https://www.omdbapi.com/?s=${searchTerm}&apikey=4f56ff1f`
 
  );
 
