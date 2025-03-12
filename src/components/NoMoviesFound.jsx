@@ -7,6 +7,12 @@ import { useNavigate } from "react-router-dom"; // Changed from useHistory to us
 
 
 const NoMoviesFound = () => {
+    const searchButton = document.querySelector(".btn__search");
+const searchInput = document.querySelector(".movie__bar"); // Corrected selector
+const movieTitle = document.getElementById("movieTitle");
+const movieDescription = document.getElementById("movieDescription");
+
+searchButton.addEventListener("click", searchMovie);
 
 const [movies, setMovies] = useState([]);
 
@@ -14,7 +20,7 @@ const [searchQuery, setSearchQuery] = useState("");
 
 const [filteredMovies, setFilteredMovies] = useState([]);
 
-const [searchTerm, setSearchTerm] = useState("movie"); // Added missing searchTerm state
+const [searchTerm, setSearchTerm] = useState(""); // Added missing searchTerm state
 
 const navigate = useNavigate(); // Changed from useHistory to useNavigate
 
@@ -26,30 +32,34 @@ setTimeout(() => {
 
 // Fixed syntax error - removed the extra closing brace
 
-const fetchMovies = async () => {
-
-try {
-
-const response = await fetch(
-
-`https://www.omdbapi.com/?s=${searchTerm}&apikey=4f56ff1f`
-);
-
-const data = await response.json();
-
-if (data.Search) {
-
-setMovies(data.Search);
-
- }
-
- } catch (error) {
-
-console.error("Error fetching movies:", error);
-
- }
-
- };
+function searchMovie() {
+    const searchTerm = searchInput.value.trim(); // Use searchTerm instead of query
+    if (searchTerm) {
+      fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=4f56ff1f`) // Corrected URL and template literal
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.Response === "True") {
+            // Clear previous search results
+            movieWrapper.innerHTML = "/recommend"; // Clear the movie display area
+  
+            // Loop through the search results and display each movie
+            data.Search.forEach((movie) => {
+              displayMovieData(movie);
+            });
+          } else {
+            alert(data.Error || "Movie not found!"); // Display error message from API or generic message
+            movieWrapper.innerHTML = ""; // Clear previous search results in case of error
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          alert("An error occurred while searching. Please try again later."); // User-friendly error message
+          movieWrapper.innerHTML = "/noMoviesFound"; // Clear previous search results in case of error
+        });
+    } else {
+      alert("Please enter a movie name to search.");
+    }
+  }
 
 
 
@@ -111,6 +121,26 @@ navigate("/recommend");
 
 return (
 
+    <>
+
+(<input
+
+type="text"
+
+className="movie__bar"
+
+id="searchInput"
+
+placeholder="Search for movies"
+
+value={searchQuery}
+
+onChange={(e) => setSearchQuery(e.target.value)}
+
+/>
+
+) : (
+
 <div className="no-movies-container">
 
 <div className="no-movies">
@@ -126,24 +156,7 @@ return (
 {/* Fixed Search component issue - using a simple icon or text instead */}
 
  🔍
-
-</span>
-
-<input
-
-type="text"
-
-className="movie__bar"
-
-id="searchInput"
-
-placeholder="Search for movies"
-
-value={searchQuery}
-
-onChange={(e) => setSearchQuery(e.target.value)}
-
-/>
+ </span>
 
 <button className="no__btn" type="submit">Search</button>
 
@@ -171,7 +184,8 @@ onChange={(e) => setSearchQuery(e.target.value)}
 
 </div>
 
-</div>
+</div>)
+</>
 
  );
 
