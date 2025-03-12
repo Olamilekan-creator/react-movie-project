@@ -35,6 +35,13 @@ body.high-contrast {
     color: #ff7518;
 }
 
+.loading {
+  background-color: lightcyan;
+  height: 100vh;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 /* No movies found */
 
 .no-movies {

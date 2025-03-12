@@ -53,8 +53,6 @@ const Header = () => {
                     className="search__input"
                     id="searchInput"
                     placeholder="Search for movies"
-                    value={searchQuery}
-                    onChange={handleSearchChange}
                   />
                 </div>
                 <ul className="menu__links">
@@ -122,7 +120,7 @@ const Header = () => {
             <div className="search__container">
               <div className="search__bar">
                 <Link to="/recommend">
-                  <span className="material-symbols-rounded btn__search">
+                  <span className="material-symbols-rounded btn__search click">
                     {" "}
                     <Search style={{ fontSize: 25, color: "" }} />
                   </span>
