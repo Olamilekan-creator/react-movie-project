@@ -97,7 +97,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav__link" onClick={toggleContrast}>
-                  <Link to="/recommended"
+                  <Link to="/#recommended"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     Movies

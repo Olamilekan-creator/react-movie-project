@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./index.css";
@@ -19,12 +19,8 @@ function App() {
     <Route path="/" element={<Home />}/>
     <Route path="/recommend" element={<Recommend/>} />
     <Route path="/details" element={<Details/>} />
-    <Switch>
-      <Route exact path="/recommend" component={NoMoviesFound} />
-      <Route exact path="/">
-      <h2>Welcome to Movie Search!</h2>
-      </Route>
-    </Switch>
+      <Route path="/recommend" component={NoMoviesFound} />
+      <Route path="*" element={<h2>Page not found!</h2>} />
    </Routes>
     </div>
     </Router>
