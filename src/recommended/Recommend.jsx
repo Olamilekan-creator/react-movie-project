@@ -5,7 +5,6 @@ import '../index.css'
 import { PlayCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import image1 from "../assets/g6.jpg"
-import NoMoviesFound from "../components/NoMoviesFound";
 
 const Recommend = () => {
     const toggleContrast = (event) => {
@@ -90,7 +89,6 @@ const Recommend = () => {
             </div>
         </div>
       </section>
-      <NoMoviesFound />
         <Footer />
        </div>
     );
