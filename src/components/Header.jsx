@@ -3,7 +3,6 @@ import PersonalLogo from "../assets/my logo.png";
 import { Menu, Search, Close } from "@mui/icons-material";
 import "../index.css";
 import { Link } from "react-router-dom";
-import NoMoviesFound from "./NoMoviesFound";
 
 const Header = () => {
 
@@ -97,7 +96,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav__link" onClick={toggleContrast}>
-                  <Link to="/#recommended"
+                  <Link to="/recommended"
                     className="nav__link--anchor link__hover-effect link__hover-effect--black"
                   >
                     Movies
@@ -143,6 +142,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
+   
   );
 };
 

@@ -19,7 +19,7 @@ function App() {
     <Route path="/" element={<Home />}/>
     <Route path="/recommend" element={<Recommend/>} />
     <Route path="/details" element={<Details/>} />
-      <Route path="/recommend" component={NoMoviesFound} />
+      <Route path="/recommend"element={<NoMoviesFound />} />
       <Route path="*" element={<h2>Page not found!</h2>} />
    </Routes>
     </div>

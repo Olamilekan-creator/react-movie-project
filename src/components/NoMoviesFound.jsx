@@ -101,7 +101,7 @@ alert("No movies found for your search. Try something else!");
 
 // Fixed navigation method from history.pushState to navigate
 
-navigate("/movies");
+navigate("/recommend");
 
  }
 
@@ -145,7 +145,7 @@ onChange={(e) => setSearchQuery(e.target.value)}
 
 />
 
-<button type="submit">Search</button>
+<button className="no__btn" type="submit">Search</button>
 
 </form>
 
