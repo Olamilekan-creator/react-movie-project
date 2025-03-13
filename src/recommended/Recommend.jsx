@@ -70,7 +70,7 @@ const searchMovies = async (query) => {
                         <hr className="new__line" />
                         
                             <div className="new__wrapper">
-                                {recommendedMovies.map((item, index) => (
+                                {(movies.length > 0 ? movies : recommendedMovies).map((item, index) => (
                                     <div key={index} className="new__movie">
                                         <div className="new__movie--one">
                                             <img src={item.image} className="new__movie1" alt="Movie Poster" />

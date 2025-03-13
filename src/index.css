@@ -851,6 +851,9 @@ padding: 30px 0;
   display: none;
 }
 
+.no-movies-container {
+  height: 60vh;
+}
 
 .carousel {
   height: 60vh;
@@ -940,6 +943,10 @@ padding-top: 60px;
 @media (max-width:768px) {
 .slide {
   top: 35%;
+}
+
+.no-movies-container {
+  height: 30vh;
 }
 
 .texts {
