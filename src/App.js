@@ -30,7 +30,7 @@ return (
 
 <Route path="/recommend" element={<Recommend />} />
 
-<Route path="/details" element={<Details />} />
+<Route path="/details/:movieId" element={<Details />} />
 
 </Routes>
 
