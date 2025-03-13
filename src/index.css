@@ -35,12 +35,6 @@ body.high-contrast {
     color: #ff7518;
 }
 
-.loading {
-  background-color: lightcyan;
-  height: 100vh;
-  font-size: 30px;
-  font-weight: bold;
-}
 
 /* No movies found */
 
@@ -173,7 +167,7 @@ border-radius: 4px;
 
 .menu__search--btn {
 font-size: 20px;
-
+color: white;
 }
 
 .search__input {
@@ -458,8 +452,8 @@ padding: 7px 20px;
   position: absolute;
   z-index: 2;
   cursor: default;
-  top: 17%;
-  left: 8%;
+  top: 22%;
+  left: 3%;
 }
 
 .search {

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import PersonalLogo from "../assets/my logo.png";
 import { Menu, Search, Close } from "@mui/icons-material";
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Header = () => {
 
+const Header = ({ searchMovies }) => {
   const [searchQuery, setSearchQuery] = useState("");
-
+const navigate = useNavigate();
   const openMenu = () => {
    document.body.classList += " menu--open"
   };
@@ -23,6 +23,13 @@ const Header = () => {
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
+
+  const handleSearchSubmit = (e) => {
+    if (e.key === "Enter") {
+        searchMovies(searchQuery);
+        navigate('/recommend'); // Navigate to the recommend page
+    }
+};
 
   return (
     <header className="header">
@@ -43,17 +50,20 @@ const Header = () => {
                   <Close />
                 </span>
                 <div className="menu__search">
-                  <Link to="/recommend">
-                    <span className="material-symbols-rounded menu__search--btn">
-                      <Search />
-                    </span>
-                  </Link>
-                  <input
-                    type="text"
-                    className="search__input"
-                    id="searchInput"
-                    placeholder="Search for movies"
-                  />
+                <span onClick={() => searchMovies(document.getElementById('searchInput').value)} className="menu__search--btn material-symbols-rounded click">
+            <Search style={{ fontSize: 25, color: "" }} />
+        </span>
+                <input
+            className="search__input"
+            type="text"
+            id="searchInput"
+            placeholder="Search for a movie..."
+            onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                    searchMovies(e.target.value);
+                }
+            }}
+        />
                 </div>
                 <ul className="menu__links">
                   <li className="menu__list">
@@ -119,18 +129,23 @@ const Header = () => {
 
             <div className="search__container">
               <div className="search__bar">
-                <Link to="/recommend">
-                  <span className="material-symbols-rounded btn__search click">
-                    {" "}
-                    <Search style={{ fontSize: 25, color: "" }} />
-                  </span>
-                </Link>
+              <span onClick={() => {
+                console.log(searchMovies);
+                 searchMovies(document.getElementById('searchInput').value);
+                 }} className="btn__search click">
+            <Search style={{ fontSize: 25, color: "" }} />
+        </span>
                 <input
-                  type="text"
-                  className="movie__bar"
-                  id="searchInput"
-                  placeholder="Search for movies"
-                />
+            className="search__input"
+            type="text"
+            id="searchInput"
+            placeholder="Search for a movie..."
+            onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                    searchMovies(e.target.value);
+                }
+            }}
+        />
               </div>
               <button className="login__btn click" onClick={toggleContrast}>
                 Login
