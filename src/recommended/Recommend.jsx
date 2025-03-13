@@ -65,7 +65,7 @@ const searchMovies = async (query) => {
                         <div className="new__page--description">
                             Recommended
                         </div>
-                        <>
+                      
                         <p className="new__para">We sorted these out for you.</p>
                         <hr className="new__line" />
                         
