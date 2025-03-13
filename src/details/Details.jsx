@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useSearch } from "../components/searchContent"; // Import context to get search movies
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import '../index.css';
 
-const Details = ({ movies }) => {
+// The Details component will be dynamically loaded
+const Details = () => {
+    const { searchQuery, movies } = useSearch();
     const [detailItems, setDetailItems] = useState({
         image: '',
         title: 'Loading...',
@@ -15,32 +18,35 @@ const Details = ({ movies }) => {
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
-            try {
-                const response = await fetch("https://www.omdbapi.com/?i=tt1877830&apikey=4f56ff1f");
-                const movie = await response.json();
-                setDetailItems({
-                    image: movie.Poster,
-                    title: movie.Title,
-                    rated: movie.Rated,
-                    released: movie.Released,
-                    year: movie.Year,
-                    description: movie.Description || 'No description available.'
-                });
-            } catch (error) {
-                console.error("Error fetching movie details:", error);
-                setDetailItems({
-                    image: '',
-                    title: 'Error fetching movie details',
-                    rated: '',
-                    released: '',
-                    year: '',
-                    description: 'Could not fetch data. Please try again later.'
-                });
+            if (searchQuery && movies.length > 0) {
+                const movie = movies[0]; // Assuming the first movie in the list
+                try {
+                    const response = await fetch(`https://www.omdbapi.com/?t=${movie.Title}&apikey=4f56ff1f`);
+                    const movieDetails = await response.json();
+                    setDetailItems({
+                        image: movieDetails.Poster,
+                        title: movieDetails.Title,
+                        rated: movieDetails.Rated,
+                        released: movieDetails.Released,
+                        year: movieDetails.Year,
+                        description: movieDetails.Plot || 'No description available.'
+                    });
+                } catch (error) {
+                    console.error("Error fetching movie details:", error);
+                    setDetailItems({
+                        image: '',
+                        title: 'Error fetching movie details',
+                        rated: '',
+                        released: '',
+                        year: '',
+                        description: 'Could not fetch data. Please try again later.'
+                    });
+                }
             }
         };
 
         fetchMovieDetails();
-    }, [movies]);
+    }, [searchQuery, movies]);
 
     return (
         <div>
@@ -49,7 +55,7 @@ const Details = ({ movies }) => {
                 <div className="more__details--row">
                     <h2 className="more__details--text">More Details</h2>
                     <hr className="hr__line" />
-                    
+
                     <div className="more__details--container">
                         <figure>
                             <img src={detailItems.image} alt={detailItems.title} className="more__details--img" />
