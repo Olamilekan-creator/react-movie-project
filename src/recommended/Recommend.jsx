@@ -73,11 +73,11 @@ const searchMovies = async (query) => {
                                 {(movies.length > 0 ? movies : recommendedMovies).map((item, index) => (
                                     <div key={index} className="new__movie">
                                         <div className="new__movie--one">
-                                            <img src={item.image} className="new__movie1" alt="Movie Poster" />
+                                            <img src={item.Poster || item.image} className="new__movie1" alt="Movie Poster" />
                                             <div className="new__movie__wrapper-bg">
                                                 <div className="new__movie--description">
                                                     <h3 id="movieTitle" className="new__description--title">
-                                                        {item.title}
+                                                        {item.Title || item.title}
                                                     </h3>
                                                     <span className="material-symbols-rounded new__btn click" onClick={toggleContrast}><PlayCircle/></span>
                                                     <Link to="/details" className="more">

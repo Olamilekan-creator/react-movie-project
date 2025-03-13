@@ -45,14 +45,14 @@ const Header = ({ searchMovies }) => {
               </span>
             </div>
 
-            <div className="menu__backdrop" onClick={closeMenu}>
-              <span className="material-symbols-rounded menu__close click">
+            <div className="menu__backdrop">
+              <span className="material-symbols-rounded menu__close click" onClick={closeMenu}>
                 <Close />
               </span>
 
               <div className="menu__search">
                 <span onClick={() => searchMovies(document.getElementById('searchInput').value)} className="menu__search--btn material-symbols-rounded click">
-            <Search style={{ fontSize: 25, color: "" }} />
+            <Search style={{ fontSize: 25, color: "" }} onClick={closeMenu}/>
         </span>
                 <input
             className="search__input"
