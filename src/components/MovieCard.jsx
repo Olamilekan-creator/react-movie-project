@@ -42,7 +42,7 @@ return (
                 <div className="movie__description">
                   <h3 className="movie__description--title">{item.title}</h3>
                   <span className="material-symbols-rounded movie__btn click"><PlayCircle style={{ fontSize: 25, color: '' }} /></span>
-                  <Link to="/details" className="more">
+                  <Link to="#" className="more">
                     More <span className="orange details">Details...</span>
                   </Link>
                 </div>

@@ -19,7 +19,7 @@ const About = () => {
             <img src={AboutImg} className="about__img" alt="About Img" />
             <div className="about__text">
               <h2 className="about__h2">Releases Coming Soon</h2>
-              <Link to="">
+              <Link to="#">
                 <span className="material-symbols-rounded about__play"><PlayCircle style={{ fontSize: 25, color: '' }} /></span>
               </Link>
               <h4 className="about__h4">Play Video</h4>

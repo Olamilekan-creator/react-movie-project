@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 import React from "react";
 import image1 from "../assets/sunset-3189813_1280.jpg";
-import image2 from "../assets/videoframe_13177.png";
+import image2 from "../assets/pop.webp";
 import image3 from "../assets/ticket.jpg";
 import image4 from "../assets/boy.webp";
 import image5 from "../assets/city.jpeg";
@@ -22,7 +22,7 @@ const Carousel = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3500,
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />
     };
@@ -36,7 +36,7 @@ const Carousel = () => {
     <div className="texts">
       <div className="texts__title">
         <h1 className="texts__description">Nice Frame</h1>
-        <p className="texts__para">2012 Olamilekan Movie</p>
+        <p className="texts__para">Released 2002</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -48,8 +48,8 @@ const Carousel = () => {
     <img src={image2} alt="slide2" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Slide 2 Title</h1>
-        <p className="texts__para">Slide 2 Description</p>
+        <h1 className="texts__description">Cinemas</h1>
+        <p className="texts__para">Released 2020</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -61,8 +61,8 @@ const Carousel = () => {
     <img src={image3} className="slide" alt="" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Nice Frame</h1>
-        <p className="texts__para">2012 Olamilekan Movie</p>
+        <h1 className="texts__description">Ticket</h1>
+        <p className="texts__para">Released 2021</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -74,8 +74,8 @@ const Carousel = () => {
     <img src={image4} alt="slide2" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Slide 2 Title</h1>
-        <p className="texts__para">Slide 2 Description</p>
+        <h1 className="texts__description">Young Boy</h1>
+        <p className="texts__para">Released 2000</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -87,8 +87,8 @@ const Carousel = () => {
     <img src={image5} className="slide" alt="" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Nice Frame</h1>
-        <p className="texts__para">2012 Olamilekan Movie</p>
+        <h1 className="texts__description">Beautiful City</h1>
+        <p className="texts__para">Released 2017</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -100,8 +100,8 @@ const Carousel = () => {
     <img src={image6} alt="slide2" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Slide 2 Title</h1>
-        <p className="texts__para">Slide 2 Description</p>
+        <h1 className="texts__description">Family</h1>
+        <p className="texts__para">Released 2010</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
@@ -113,8 +113,8 @@ const Carousel = () => {
     <img src={image7} className="slide" alt="" />
     <div className="texts">
       <div className="texts__title">
-        <h1 className="texts__description">Nice Frame</h1>
-        <p className="texts__para">2012 Olamilekan Movie</p>
+        <h1 className="texts__description">Gentleman</h1>
+        <p className="texts__para">Released 2003</p>
         <button className="watch">
           <span className="material-symbols-rounded font"><PlayCircle /></span> Watch Now <span className="free">FREE</span>
         </button>
